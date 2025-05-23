@@ -147,7 +147,7 @@
       <div class="header-icons">
         <select class="menu-select" onchange="location = this.value;">
           <option value="#">Menu</option>
-          <option value="sitoWebMuseo.html">Home</option>
+          <option value="index.html">Home</option>
           <option value="profiloUtente.html" selected>Pagina Personale</option>
           <option value="contatti.html">Contatti</option>
           <option value="info.html">Info</option>
