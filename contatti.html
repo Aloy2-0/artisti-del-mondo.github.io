@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti - Associazione artisti del Mondo</title>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: rgba(15, 24, 106, 0.95);
+      color: white;
+      padding: 20px;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .logo-title h1 {
+      font-size: 24px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .header-icons i {
+      font-size: 20px;
+      color: white;
+    }
+
+    .header-icons a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .header-icons a:hover {
+      color: #f1c40f;
+    }
+
+    .menu-select {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #fff;
+      color: #293b98;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button {
+      background-color: #224365;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form input:hover{
+      background-color: #f1c40f;
+    }
+
+    .contact-form textarea:hover{
+      background-color: #f1c40f;
+    }
+
+    .contact-form button:hover {
+      background-color: #1a242f;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #224365;
+    }
+
+    footer {
+      background-color: rgba(15, 24, 106, 0.95);
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo-title h1 {
+        font-size: 20px;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-icons {
+        justify-content: flex-start;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-title">
+        <img src="img/logo.PNG" alt="Logo" class="logo" />
+        <h1>Artisti del Mondo</h1>
+      </div>
+
+      <div class="header-icons">
+        <select class="menu-select" onchange="location = this.value;">
+          <option value="#">Menu</option>
+          <option value="sitoWebMuseo.html">Home</option>
+          <option value="login.html">Pagina Personale</option>
+          <option value="contatti.html">Contatti</option>
+          <option value="info.html">Info</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenuto principale -->
+  <div class="container">
+    <h2>Contattaci</h2>
+
+    <form class="contact-form" method="POST" action="invia_contatto.html">
+      <input type="text" name="nome" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="messaggio" rows="5" placeholder="Il tuo messaggio" required></textarea>
+      <button type="submit">Invia Messaggio</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Informazioni di contatto</h3>
+      <p><i class="fas fa-envelope"></i> info@musei.it</p>
+      <p><i class="fas fa-phone"></i> +39 000 0000000</p>
+      <p><i class="fas fa-map-marker-alt"></i> Via dei Musei 123, Roma, Italia</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Associazione Artisti del Mondo | Tutti i diritti riservati
+  </footer>
+
+</body>
+</html>

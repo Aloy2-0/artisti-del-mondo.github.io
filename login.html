@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Artisti del Mondo</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/sfondo_log.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 30px;
+      color: #293b98;
+      font-size: 26px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 50%;
+      padding: 12px;
+      background-color: #224365;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-container input{
+        width: 50%;
+        padding: 12px;
+        background-color: #eff3f6;
+        color: #224365;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .login-container input:hover{
+        background-color: #f1c40f;
+    }
+
+    .login-container button:hover {
+      background-color: #1a242f;
+    }
+
+    .login-container .register-link {
+      margin-top: 20px;
+      display: block;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .login-container .register-link a {
+      color: #224365;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-container .register-link a:hover {
+      color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Accedi al tuo account</h1>
+    <form action="loginCheck.php" method="POST">
+      <input type="email" name="email" placeholder="Nome utente" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit" name="invio" value="Login">Login</button>
+      <input type="reset" name="cancella" value="Annulla" />
+    </form>
+
+    <div class="register-link">
+      Non hai un account? <a href="registrazione.html">Registrati</a>
+    </div>
+  </div>
+
+</body>
+</html>

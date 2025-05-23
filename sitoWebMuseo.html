@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Associazione artisti del mondo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c3e50;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    /* header */
+    header {
+      background-color: rgba(15, 24, 106, 0.95);
+      color: rgb(255, 255, 255);
+      padding: 20px;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .logo-title h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .header-icons i {
+      font-size: 20px;
+      color: white;
+    }
+
+    .header-icons a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .header-icons a:hover {
+      color: #f1c40f;
+    }
+
+    .menu-select {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #fff;
+      color: #293b98;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* body */
+    .container {
+      max-width: 50%;
+      margin: 100px auto;
+      background: rgb(255, 255, 255);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .search-bar input {
+      flex: 1 1 200px;
+    }
+
+    .search-bar button {
+      background-color: #224365;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #1a242f;
+    }
+    .search-bar input:hover{
+      background-color: #f1c40f;
+    }
+
+    section h2 {
+      margin-top: 30px;
+      font-size: 24px;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+    }
+
+    .artist {
+      margin-left: 13px;
+    }
+
+    .artist h3 {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    .artworks {
+      margin-left: 20px;
+      list-style: square;
+      color: #555;
+    }
+
+    footer {
+      background-color: rgba(15, 24, 106, 0.95);
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: auto;
+    }
+
+    /* parte responsive */
+    @media screen and (max-width: 768px) {
+      .logo-title h1 {
+        font-size: 20px;
+      }
+
+      .container {
+        max-width: 90%;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-bar input,
+      .search-bar button {
+        width: 100%;
+      }
+
+      .menu-select {
+        font-size: 14px;
+      }
+
+      .header-icons i {
+        font-size: 18px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-icons {
+        justify-content: flex-start;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-title">
+        <img src="img/logo.PNG" alt="Logo" class="logo" />
+        <h1>Artisti del Mondo</h1>
+      </div>
+
+      <div class="header-icons">
+        <select class="menu-select" onchange="window.location.href=this.value">
+          <option value="#">Menu</option>
+          <option value="sitoWebMuseo.html">Home</option>
+          <option value="login.html">Pagina Personale</option>
+          <option value="contatti.html">Contatti</option>
+          <option value="info.html">Info</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- body -->
+  <div class="container">
+    <section class="search-bar">
+      <section>
+        <h2>Hai in mente qualche artista?</h2>
+
+        <div class="artist">
+          <h3>Prova a cercarlo con la barra sottostante:</h3>
+          <br />
+        </div>
+
+        <form id="searchForm" method="POST" action="selectArtisti.php" style="display: flex; flex-wrap: wrap; gap: 10px; width: 100%;"> 
+          <input type="text" name="nome" placeholder="Nome artista" required>
+          <input type="text" name="cognome" placeholder="Cognome artista" required>
+          <button type="submit" value="Cerca">Cerca</button>
+          <input type="reset" name="cancella" value="Annulla">
+        </form>
+      </section>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Associazione Artisti del Mondo | Tutti i diritti riservati
+  </footer>
+
+</body>
+</html>
