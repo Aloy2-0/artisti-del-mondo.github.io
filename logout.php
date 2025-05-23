@@ -6,6 +6,6 @@
 	
 	// elimina la sessione
 	session_destroy();
-	header("Location: sitoWebMuseo.html");
+	header("Location: index.html");
     exit();
 ?>
